@@ -127,7 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-coelho
+/coelho
 
 # Spyder project settings
 .spyderproject
