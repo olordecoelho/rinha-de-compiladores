@@ -1,1 +1,0 @@
-{"name":"var/rinha/hello.rinha","expression":{"kind":"Prnt","value":{"kind":"Str","value":"Hello World!","location":{"start":6,"end":22,"filename":"var/rinha/hello.rinha"}},"location":{"start":0,"end":23,"filename":"var/rinha/hello.rinha"}},"location":{"start":0,"end":23,"filename":"var/rinha/hello.rinha"}}
