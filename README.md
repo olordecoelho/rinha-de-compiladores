@@ -6,7 +6,7 @@
 
 # O Galo mais brabo da [rinha-de-compiler](https://github.com/aripiprazole/rinha-de-compiler) - V1.0
 
-### É um interpretador simples da linguagem 'Rinha' de programação, funciona, mas é lento(Lembrando que eu estudo programação de forma séria há menos de um ano). Registrei cada passo da construção do interpretador e cou publicar minha experiência em breve.
+### É um interpretador simples da linguagem 'Rinha' de programação, funciona, mas é lento. Registrei cada passo da construção do interpretador e vou publicar minha experiência em breve.
 
 # Vamos rodar:
 
