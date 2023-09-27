@@ -128,6 +128,24 @@ class TupleValue(BaseValue):
 
 Value = TupleValue | ClosureValue | BooleanValue | IntValue | StringValue
 
+# Utility function to convert a value into an appropriate string representation
+def value_to_str(value: Value) -> str:
+    if isinstance(value, dict):
+        kind = value.get('kind')
+        if kind == 'boolean':
+            return 'true' if value.get('value') else 'false'
+        elif kind == 'string':
+            return value.get('value')
+        elif kind == 'int':
+            return str(value.get('value'))
+        elif kind == 'closure':
+            return "<#closure>"
+        elif kind == 'tuple':
+            first_value = value_to_str(value.get('first'))
+            second_value = value_to_str(value.get('second'))
+            return f"({first_value}, {second_value})"
+    return str(value)
+
 # Utility function to check if a value is a tuple
 def is_tuple(value: Value) -> bool:
     return value['kind'] == 'tuple'
@@ -186,8 +204,8 @@ def interpret_let(term: Let, env: Env) -> Value:
 # Interpretation function for printing
 def interpret_print(term: Print, env: Env) -> Value:
     result = interpret(term['value'], env)
-    print(value_to_str(result))
-    return result
+    value_to_str(result) 
+    return result['value']  
 
 # Interpretation function for variables
 def interpret_variable(term: Var, env: Env) -> Value:
