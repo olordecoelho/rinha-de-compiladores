@@ -4,31 +4,52 @@
 
 </div>
 
-# O Galo mais brabo da [rinha-de-compiler](https://github.com/aripiprazole/rinha-de-compiler) - V1.0
+# Untitled
 
-### É um interpretador simples da linguagem 'Rinha' de programação, funciona, mas é lento. Registrei cada passo da construção do interpretador e vou publicar minha experiência em breve.
+# **Galo Índio - V1.1**
 
-# Vamos rodar:
+## **Visão Geral**
 
-## Primeiramente builde a imagem:
+O Galo Índio é um interpretador simples da linguagem de programação "Rinha". Este projeto foi desenvolvido como parte de um experimento de construção de um interpretador onde registro cada etapa do processo.
+
+## **Uso Rápido**
+
+Para começar, siga os passos abaixo:
+
+### **1. Clone o Repositório**
+
+Primeiro, clone o repositório do GitHub para obter o código-fonte do projeto:
+
+```bash
+git clone https://github.com/aripiprazole/rinha-de-compiler.git
+cd rinha-de-compiler
+```
+
+### **2. Builde a Imagem Docker**
+
+Em seguida, execute o seguinte comando para construir a imagem Docker:
 
 ```bash
 docker build -t galo-indio .
 ```
 
-## Segundamente rode a imagem:
+### **3. Execute a Imagem Docker**
+
+Rode a imagem Docker com a seguinte linha de comando:
 
 ```bash
-docker run galo-indio
+docker run -e TERM=xterm galo-indio
 ```
-## Agora escreva assim para usar outros arquivos rinha em JSON:
+
+### **Executando Programa Sem Docker**
+
+Para executar programas Rinha a partir de arquivos JSON, utilize o seguinte comando:
 
 ```bash
 python indio.py -r caminho-do-arquivo.rinha.json
 ```
 
-## Enjoy
-
-### Não, não é o galo mais brabo, mas eu tentei...
+> By Daniel Coelho - 2023 - olordecoelho@proton.me
+>
 
 [banner]: ./img/banner.png

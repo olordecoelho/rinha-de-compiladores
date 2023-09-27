@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-ENV env=Env
 
 COPY requires.txt .
 
