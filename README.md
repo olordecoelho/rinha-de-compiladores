@@ -21,7 +21,7 @@ Para começar, siga os passos abaixo:
 Primeiro, clone o repositório do GitHub para obter o código-fonte do projeto:
 
 ```bash
-git https://github.com/olordecoelho/rinha-de-compiladores
+git clone https://github.com/olordecoelho/rinha-de-compiladores
 cd rinha-de-compiladores
 ```
 
