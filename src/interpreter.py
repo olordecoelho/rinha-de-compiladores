@@ -1,5 +1,6 @@
 from typing import TypedDict, Literal
 import copy
+import numpy as np
 
 class RinhaError(Exception):
     def __init__(self, message):
@@ -57,7 +58,7 @@ class Bool(Term):
     location: Loc
 
 class Int(Term):
-    value: int
+    value: np.int32()
     location: Loc
 
 BinaryOp = Literal[
