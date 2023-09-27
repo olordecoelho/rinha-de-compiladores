@@ -21,8 +21,8 @@ Para começar, siga os passos abaixo:
 Primeiro, clone o repositório do GitHub para obter o código-fonte do projeto:
 
 ```bash
-git clone https://github.com/aripiprazole/rinha-de-compiler.git
-cd rinha-de-compiler
+git https://github.com/olordecoelho/rinha-de-compiladores
+cd rinha-de-compiladores
 ```
 
 ### **2. Builde a Imagem Docker**
