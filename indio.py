@@ -1,12 +1,9 @@
 import argparse
 import os
-import ujson as json
 import sys
+import ujson as json
+from src.interpreter import Interpreter, RinhaError
 
-from src.interpreter import interpret
-
-class RinhaError(Exception):
-    pass
 
 def load_json_file(filename):
     try:
@@ -30,15 +27,15 @@ if __name__ == "__main__":
         try:
             filename = args.run
             if not filename.endswith('.json'):
-                raise RinhaError("Error: O arquivo deve ter extenssao .json")
+                raise RinhaError("Error: O arquivo deve ser .json")
             
             data = load_json_file(filename)
             program_node = data.get("expression")
             if program_node is None:
-                raise RinhaError("Error: Expressao nao encontrada.")
+                raise RinhaError("Error: Expressao nao  encontrada.")
             
-            output = interpret(program_node, {})  # Replace 'interpret' with your actual interpreter function
-            print(output)
+            print(Interpreter(program_node).run())  
+
         except RinhaError as e:
             print(e, file=sys.stderr)
             sys.exit(1)

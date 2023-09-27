@@ -1,10 +1,22 @@
-FROM python:3.11-alpine
+
+FROM python:3.11-slim-buster
+
+
+RUN apt-get update && apt-get install -y \
+    && rm -rf /var/lib/apt/lists/*
+
 
 WORKDIR /app
 
-COPY ./requires.txt /app/requires.txt
-COPY ./var/rinha/ /var/rinha/
-COPY . .
-RUN pip install -r requires.txt
+ENV env=Env
 
-CMD ["python", "indio.py", "-r", "/var/rinha/fib.rinha.json"]
+COPY requires.txt .
+
+
+RUN pip install --no-cache-dir -r requires.txt
+
+
+COPY . .
+
+
+CMD ["python", "indio.py", "-r", "./var/rinha/fib.rinha.json"]
