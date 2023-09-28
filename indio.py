@@ -34,7 +34,7 @@ if __name__ == "__main__":
         
         print(Interpreter(program_node).run())
     else:
-        default_file_path = os.path.join(os.path.dirname(__file__), 'var/rinha/source.rinha.json')
+        default_file_path = os.path.join(os.path.dirname(__file__), '/var/rinha/source.rinha.json')
         try:
             data = load_json_file(default_file_path)
             program_node = data.get("expression")
